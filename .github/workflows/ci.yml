@@ -64,7 +64,7 @@ jobs:
           severity: HIGH,CRITICAL
           format: table
           output: trivy-vulnerability-report.txt
-          exit-code: "0"
+          exit-code: "1"
 
       - name: Display vulnerability report
         if: always()
@@ -120,4 +120,3 @@ jobs:
           path: trivy-secret-report.txt
           if-no-files-found: warn
           retention-days: 14
-          
