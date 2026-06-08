@@ -19,6 +19,6 @@ class HelloControllerTest {
     void helloShouldReturnExpectedMessage() throws Exception {
         mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.message").value("Wrong Message"));
+                .andExpect(jsonPath("$.message").value("Hello DevSecOps"));
     }
 }
